@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_96qE4UHyEeqJAbJyXaqukw" label="gmm_talend" description="CI CD Project Demo" language="java" technicalLabel="GMM_TALEND" author="_96qE4kHyEeqJAbJyXaqukw" productVersion="Talend Cloud Real-Time Big Data Platform-7.2.1.20190620_1446" url="{&quot;location&quot;:&quot;https://github.com/gmeimers/talend.git&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" itemsRelationVersion="1.3" bigData="false">
+  <TalendProperties:Project xmi:id="_96qE4UHyEeqJAbJyXaqukw" label="gmm_talend" description="CI CD Project Demo" language="java" technicalLabel="GMM_TALEND" author="_96qE4kHyEeqJAbJyXaqukw" productVersion="Talend Cloud Real-Time Big Data Platform-7.1.1.20190228_0243-patch" url="{&quot;location&quot;:&quot;https://github.com/gmeimers/talend.git&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" itemsRelationVersion="1.3" bigData="false">
     <migrationTask xmi:id="_-EwcEEHyEeqJAbJyXaqukw" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_96qE4kHyEeqJAbJyXaqukw" login="gmeimers@ala.talend.com" firstName="Greg" lastName="Meimers" type="DQ"/>
