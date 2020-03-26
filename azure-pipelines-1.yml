@@ -1,0 +1,38 @@
+# Talend CI/CD on Azure DevOps
+# Build Pipeline for building and publishing Docker images   
+trigger:
+- master
+pool:
+ vmImage: 'ubuntu-latest'   
+variables:
+- group: gmm_variables
+- name: project_name
+  value: 'GMM_TALEND'
+- name: job_name
+  value: '/cicd_demo'
+- name: job_version
+  value: '0.1'
+steps:
+  - task: DownloadSecureFile@1
+    name: settings_xml
+    inputs:
+      secureFile: settings.xml   
+  - task: DownloadSecureFile@1
+    name: license
+    inputs:
+      secureFile: license   
+  - task: CmdLine@2
+    inputs:
+      script: 'docker pull openjdk:8-jre-slim'   
+  - task: Maven@3
+    inputs:
+        mavenPomFile: '$(project_name)/poms/pom.xml' 
+        mavenOptions: |
+          -Dlicense.path=$(license.secureFilePath)
+          -Dupdatesite.path=$(updatesite_path)
+          -Ddocker.push.registry=$(DOCKER_REGISTRY)
+          -Ddocker.push.username=$(DOCKER_USERNAME)
+          -Ddocker.push.password=$(DOCKER_PASSWORD)
+          -Xmx3096m -Xmx1024m
+        options: '--settings $(settings_xml.secureFilePath) -X -Pdocker -pl jobs/process/$(job_name)_$(job_version) -am'
+        goals: 'deploy'
