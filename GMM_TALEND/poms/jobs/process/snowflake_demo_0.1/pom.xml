@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.example.gmm_talend</groupId>
     <artifactId>code.Master</artifactId>
-    <version>7.2.1</version>
+    <version>7.3.1</version>
     <relativePath>../../../</relativePath>
   </parent>
   <groupId>org.example.gmm_talend.job</groupId>
@@ -19,11 +19,11 @@
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.version>0.1</talend.job.version>
     <talend.project.name.lowercase>gmm_talend</talend.project.name.lowercase>
-    <talend.job.path>gmm_talend/snowflake_demo_0_1</talend.job.path>
+    <talend.job.path>gmm_talend</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>GMM_TALEND</talend.project.name>
-    <talend.product.version>7.2.1.20190620_1446</talend.product.version>
+    <talend.product.version>7.3.1.20200219_1130</talend.product.version>
     <talend.job.finalName>snowflake_demo_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.gmm_talend.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.gmm_talend.code</talend.routine.groupid>
@@ -60,12 +60,12 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>audit-common</artifactId>
-      <version>0.31.8</version>
+      <version>1.8.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.daikon</groupId>
-      <artifactId>audit-logback</artifactId>
-      <version>0.31.8</version>
+      <artifactId>audit-log4j1</artifactId>
+      <version>1.8.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.auto</groupId>
@@ -83,19 +83,29 @@
       <version>1.8.1</version>
     </dependency>
     <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.9.3</version>
+    </dependency>
+    <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
       <version>1.10</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-compress</artifactId>
-      <version>1.8.1</version>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>3.2.2</version>
     </dependency>
     <dependency>
-      <groupId>commons-lang</groupId>
-      <artifactId>commons-lang</artifactId>
-      <version>2.6</version>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-compress</artifactId>
+      <version>1.19</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-configuration2</artifactId>
+      <version>2.0</version>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
@@ -103,24 +113,34 @@
       <version>3.8.1</version>
     </dependency>
     <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-api</artifactId>
-      <version>0.27.3</version>
+      <version>0.28.2</version>
     </dependency>
     <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-common</artifactId>
-      <version>0.27.3</version>
+      <version>0.28.2</version>
     </dependency>
     <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-snowflake-definition</artifactId>
-      <version>0.27.3</version>
+      <version>0.28.2</version>
     </dependency>
     <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-snowflake-runtime</artifactId>
-      <version>0.27.3</version>
+      <version>0.28.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.daikon</groupId>
+      <artifactId>crypto-utils</artifactId>
+      <version>0.31.10</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -130,17 +150,17 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>daikon</artifactId>
-      <version>0.31.7</version>
+      <version>0.31.10</version>
     </dependency>
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>daikon-exception</artifactId>
-      <version>0.31.7</version>
+      <version>0.31.10</version>
     </dependency>
     <dependency>
-      <groupId>dom4j</groupId>
+      <groupId>org.dom4j</groupId>
       <artifactId>dom4j</artifactId>
-      <version>1.6.1</version>
+      <version>2.1.1</version>
     </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
@@ -148,14 +168,24 @@
       <version>20.0</version>
     </dependency>
     <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpcore</artifactId>
+      <version>4.4.9</version>
+    </dependency>
+    <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
-      <version>2.9.0</version>
+      <version>2.10.1</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
-      <version>2.9.9</version>
+      <version>2.10.1</version>
     </dependency>
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
@@ -165,7 +195,7 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.9.9</version>
+      <version>2.10.1</version>
     </dependency>
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
@@ -195,7 +225,7 @@
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>job-audit</artifactId>
-      <version>1.0</version>
+      <version>1.1</version>
     </dependency>
     <dependency>
       <groupId>joda-time</groupId>
@@ -218,19 +248,34 @@
       <version>1.2.17</version>
     </dependency>
     <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>1.3.0-alpha4</version>
-    </dependency>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-core</artifactId>
-      <version>1.3.0-alpha4</version>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-to-slf4j</artifactId>
+      <version>2.12.1</version>
     </dependency>
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>logging-event-layout</artifactId>
-      <version>0.31.8</version>
+      <version>1.8.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.resolver</groupId>
+      <artifactId>maven-resolver-api</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.resolver</groupId>
+      <artifactId>maven-resolver-impl</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.resolver</groupId>
+      <artifactId>maven-resolver-spi</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.resolver</groupId>
+      <artifactId>maven-resolver-util</artifactId>
+      <version>1.3.1</version>
     </dependency>
     <dependency>
       <groupId>org.osgi</groupId>
@@ -240,7 +285,7 @@
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>org.talend.dataquality.parser</artifactId>
-      <version>6.0.0</version>
+      <version>7.3.1</version>
     </dependency>
     <dependency>
       <groupId>com.thoughtworks.paranamer</groupId>
@@ -250,12 +295,12 @@
     <dependency>
       <groupId>org.ops4j.pax.url</groupId>
       <artifactId>pax-url-aether</artifactId>
-      <version>2.4.7</version>
+      <version>2.6.2</version>
     </dependency>
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>1.7.10</version>
+      <groupId>org.ops4j.pax.url</groupId>
+      <artifactId>pax-url-aether-support</artifactId>
+      <version>2.6.2</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -263,9 +308,9 @@
       <version>1.7.25</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>slf4j-log4j12-1.7.10</artifactId>
-      <version>6.0.0</version>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.25</version>
     </dependency>
     <dependency>
       <groupId>org.xerial.snappy</groupId>
@@ -275,12 +320,12 @@
     <dependency>
       <groupId>net.snowflake</groupId>
       <artifactId>snowflake-jdbc</artifactId>
-      <version>3.6.13</version>
+      <version>3.11.1</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>talend-codegen-utils</artifactId>
-      <version>0.25.4</version>
+      <version>0.28.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -295,7 +340,7 @@
     <dependency>
       <groupId>org.example.gmm_talend.code</groupId>
       <artifactId>routines</artifactId>
-      <version>7.2.1</version>
+      <version>7.3.1</version>
     </dependency>
   </dependencies>
   <build>
