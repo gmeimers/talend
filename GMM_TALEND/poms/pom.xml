@@ -12,6 +12,7 @@
     <module>code/routines</module>
     <module>jobs/process/cicd_demo_0.1</module>
     <module>jobs/process/snowflake_demo_0.1</module>
+    <module>jobs/process/test_case_0.1</module>
   </modules>
   <properties>
     <signer.version>7.2.1</signer.version>
