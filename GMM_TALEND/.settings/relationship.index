@@ -5,6 +5,17 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_dO4IMJn3EeqGbJz8Hbc2ow",
+    "version" : "0.1",
+    "type" : "test_case"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_Gy20oEHzEeqJAbJyXaqukw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
     "id" : "DQTechnical",
     "version" : "Latest",
     "type" : "routine"
@@ -67,7 +78,7 @@
   } ]
 }, {
   "baseItem" : {
-    "id" : "_Gy20oEHzEeqJAbJyXaqukw",
+    "id" : "_dO4IMJn3EeqGbJz8Hbc2ow",
     "version" : "0.1",
     "type" : "job"
   },
@@ -213,16 +224,5 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
-  } ]
-}, {
-  "baseItem" : {
-    "id" : "_G_tP8Jn6EeqGbJz8Hbc2ow",
-    "version" : "0.1",
-    "type" : "test_case"
-  },
-  "relatedItems" : [ {
-    "id" : "_dO4IMJn3EeqGbJz8Hbc2ow",
-    "version" : "0.1",
-    "type" : "test_case"
   } ]
 } ]
