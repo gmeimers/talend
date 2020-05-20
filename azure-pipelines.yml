@@ -10,7 +10,7 @@ variables:
 - name: project_name
   value: 'GMM_TALEND'
 - name: job_name
-  value: '/cicd_demo'
+  value: 'cicd_demo'
 - name: job_version
   value: '0.1'
 
